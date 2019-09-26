@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.widget.ImageView;
 
@@ -37,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
         //заполним данными лист
         myDataset = new ImageView[2];
 
+
         //TODO
+        myDataset[0] = new ImageView(this);
+        myDataset[1] = new ImageView(this);
         myDataset[0].setImageResource(R.drawable.tima1);
         myDataset[1].setImageResource(R.drawable.tima2);
 
