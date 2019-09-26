@@ -4,10 +4,5 @@
     android:layout_height="match_parent">
 
 
-    <ImageView
-        android:id="@+id/tima_photos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/maol"
-        android:layout_weight="1"/>
+
 </CardView>

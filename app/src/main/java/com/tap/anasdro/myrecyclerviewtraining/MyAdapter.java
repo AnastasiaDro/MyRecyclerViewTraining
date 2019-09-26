@@ -21,9 +21,10 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         // each data item is just a string in this case
         public CardView cardView;
-        public MyViewHolder(CardView v) {
-            super(v);
-            cardView = v;
+        public View vv;
+        public MyViewHolder(View vv) {
+            super(vv);
+            vv = vv;
         }
     }
 
@@ -38,8 +39,8 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public MyAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // create a new view
-        CardView v = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.my_text_view, parent, false);
-        MyViewHolder vh = new MyViewHolder(v);
+        View vv = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_card_view, parent, false);
+        MyViewHolder vh = new MyViewHolder(vv);
 
         return vh;
     }
