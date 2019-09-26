@@ -4,7 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -21,10 +21,9 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         // each data item is just a string in this case
         public CardView cardView;
-        public View vv;
-        public MyViewHolder(View vv) {
-            super(vv);
-            vv = vv;
+        public MyViewHolder(CardView v) {
+            super(v);
+            cardView = v;
         }
     }
 
@@ -39,8 +38,8 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public MyAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // create a new view
-        View vv = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_card_view, parent, false);
-        MyViewHolder vh = new MyViewHolder(vv);
+        CardView cardView = (CardView)LayoutInflater.from(parent.getContext()).inflate(R.layout.my_card_view, parent, false);
+        MyViewHolder vh = new MyViewHolder(cardView);
 
         return vh;
     }
